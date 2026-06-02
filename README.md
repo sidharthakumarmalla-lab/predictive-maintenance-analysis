@@ -78,8 +78,6 @@ PredictiveMaintenance/
 │
 ├── data/
 │   └── predictive_maintenance.csv
-│
-└── screenshots/
 ```
 
 ---
