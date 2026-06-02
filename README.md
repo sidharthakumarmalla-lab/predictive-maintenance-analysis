@@ -2,135 +2,262 @@
 
 ## 📌 Overview
 
-Unplanned equipment failures can lead to significant operational downtime and financial losses in industrial systems. This project applies **data analytics and machine learning techniques** to predict equipment failures in advance, enabling proactive maintenance and improved system reliability.
+Predictive Maintenance & Equipment Failure Analysis is a Machine Learning project designed to predict potential machine failures before they occur.
 
-The analysis is performed using a real-world dataset containing machine operational parameters such as temperature, pressure, rotational speed, and tool wear indicators.
+The system analyzes machine operating parameters such as temperature, rotational speed, torque, and tool wear to determine whether equipment is likely to fail. This helps organizations reduce downtime, improve operational efficiency, and lower maintenance costs.
 
----
-
-## 🎯 Objectives
-
-* Identify key factors contributing to equipment failure
-* Perform exploratory data analysis to uncover hidden patterns
-* Build predictive models to forecast machine failure
-* Evaluate model performance and reliability
-* Provide actionable insights for maintenance optimization
+The project includes a trained Machine Learning model and a Streamlit web application for real-time predictions.
 
 ---
 
-## 📂 Dataset Description
+## 🎯 Problem Statement
 
-The dataset consists of industrial sensor and operational data, including:
+Unexpected equipment failures can lead to:
 
-* Air temperature
-* Process temperature
-* Rotational speed
-* Torque
-* Tool wear
-* Machine failure indicators
+- Production downtime
+- Increased maintenance costs
+- Reduced productivity
+- Equipment damage
+- Operational inefficiencies
 
-These variables collectively help assess the health and performance of equipment.
-
----
-
-## ⚙️ Methodology
-
-### 1. Data Preprocessing
-
-* Handling missing values and inconsistencies
-* Feature selection and transformation
-* Data normalization and encoding
-
-### 2. Exploratory Data Analysis (EDA)
-
-* Distribution analysis of key variables
-* Correlation analysis between features
-* Failure vs non-failure pattern identification
-
-### 3. Model Development
-
-* Applied supervised machine learning models such as:
-
-  * Logistic Regression
-  * Decision Trees / Random Forest
-  * (Add your actual models if different)
-
-### 4. Model Evaluation
-
-* Accuracy
-* Precision, Recall, F1-score
-* Confusion Matrix
+This project aims to proactively identify failure risks using machine learning techniques.
 
 ---
 
-## 📊 Key Insights
+## 🚀 Features
 
-* Equipment failure is strongly influenced by **tool wear and torque levels**
-* Temperature variations show **non-linear relationships** with failure events
-* Imbalanced data can bias predictions, requiring careful evaluation
-* Predictive models can significantly reduce unexpected downtime when properly tuned
-
----
-
-## 🚀 Results
-
-The implemented models demonstrate the ability to:
-
-* Accurately classify failure vs non-failure cases
-* Identify critical thresholds for machine parameters
-* Provide early warning signals for maintenance actions
+- Data preprocessing and cleaning
+- Exploratory Data Analysis (EDA)
+- Feature engineering
+- Machine failure prediction
+- Random Forest Classification Model
+- Interactive Streamlit web application
+- Real-time prediction interface
+- Model serialization using Pickle
 
 ---
 
-## 🛠️ Technologies Used
+## 🏗️ System Architecture
 
-* Python
-* Pandas & NumPy
-* Matplotlib & Seaborn
-* Scikit-learn
+```text
+Machine Dataset
+       │
+       ▼
+Data Cleaning & Preprocessing
+       │
+       ▼
+Feature Engineering
+       │
+       ▼
+Model Training
+(Random Forest Classifier)
+       │
+       ▼
+Model Serialization
+(model.pkl)
+       │
+       ▼
+Streamlit Web Application
+       │
+       ▼
+Real-Time Failure Prediction
+```
+
+---
+
+## 📂 Project Structure
+
+```text
+PredictiveMaintenance/
+│
+├── app.py
+├── train_model.py
+├── model.pkl
+├── requirements.txt
+├── README.md
+│
+├── data/
+│   └── predictive_maintenance.csv
+│
+└── screenshots/
+```
+
+---
+
+## 📊 Dataset Information
+
+The dataset contains machine operational parameters:
+
+| Feature | Description |
+|----------|-------------|
+| Type | Machine Type |
+| Air Temperature | Air temperature in Kelvin |
+| Process Temperature | Process temperature in Kelvin |
+| Rotational Speed | Machine RPM |
+| Torque | Torque generated |
+| Tool Wear | Tool wear duration |
+| Target | Failure / No Failure |
+
+---
+
+## ⚙️ Technologies Used
+
+### Programming Language
+- Python
+
+### Libraries
+- Pandas
+- NumPy
+- Scikit-Learn
+- Matplotlib
+- Seaborn
+- Pickle
+
+### Web Application
+- Streamlit
+
+### Development Tools
+- Jupyter Notebook
+- VS Code
+- GitHub
+
+---
+
+## 🤖 Machine Learning Model
+
+### Algorithm Used
+
+Random Forest Classifier
+
+### Why Random Forest?
+
+- Handles non-linear relationships
+- Robust against overfitting
+- High prediction accuracy
+- Works well on structured industrial datasets
+
+---
+
+## 📈 Model Performance
+
+### Accuracy
+
+**98.45%**
+
+### Evaluation Metrics
+
+- Accuracy Score
+- Classification Report
+- Confusion Matrix
+
+---
+
+## 🖥️ Streamlit Application
+
+The Streamlit application allows users to:
+
+- Select machine type
+- Enter operating parameters
+- Predict equipment failure risk instantly
+
+### Input Parameters
+
+- Machine Type
+- Air Temperature
+- Process Temperature
+- Rotational Speed
+- Torque
+- Tool Wear
+
+### Output
+
+- Equipment Operating Normally
+or
+- Machine Failure Predicted
 
 ---
 
 ## ▶️ How to Run the Project
 
-1. Clone the repository:
+### Step 1: Clone Repository
 
-   ```bash
-   git clone https://github.com/your-username/predictive-maintenance-analysis.git
-   ```
+```bash
+git clone https://github.com/yourusername/predictive-maintenance.git
+```
 
-2. Navigate to the project folder:
+### Step 2: Navigate to Project Folder
 
-   ```bash
-   cd predictive-maintenance-analysis
-   ```
+```bash
+cd predictive-maintenance
+```
 
-3. Install dependencies:
+### Step 3: Install Dependencies
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+pip install -r requirements.txt
+```
 
-4. Run the Jupyter Notebook:
+### Step 4: Run Streamlit App
 
-   ```bash
-   jupyter notebook
-   ```
-
----
-
-## 📈 Applications
-
-* Industrial automation
-* Smart manufacturing
-* Predictive maintenance systems
-* Reliability engineering
+```bash
+streamlit run app.py
+```
 
 ---
 
-## ⭐ If you found this useful
+## 💡 Business Impact
 
-Give this repo a star and feel free to contribute!
+This solution can help organizations:
+
+- Reduce unexpected breakdowns
+- Improve maintenance planning
+- Increase equipment reliability
+- Minimize production downtime
+- Lower operational costs
 
 ---
+
+## 🔮 Future Enhancements
+
+- FastAPI Integration
+- Cloud Deployment (AWS/Azure)
+- Real-time IoT Data Integration
+- Predictive Maintenance Dashboard
+- Remaining Useful Life (RUL) Prediction
+- Alert & Notification System
+
+---
+
+## 🧠 Key Learnings
+
+Through this project, I gained experience in:
+
+- Data preprocessing
+- Exploratory Data Analysis
+- Machine Learning model development
+- Model deployment concepts
+- Streamlit application development
+- End-to-end ML workflow implementation
+
+---
+
+## 👨‍💻 Author
+
+### Sidhartha Kumar Malla
+
+B.Tech (Electrical Engineering)
+
+M.Tech (Industrial Engineering & Management)
+
+Skills:
+- Python
+- SQL
+- Power BI
+- Machine Learning
+- Data Analytics
+- Streamlit
+
+---
+
+⭐ If you found this project useful, please consider giving it a star.
 
