@@ -71,7 +71,7 @@ Real-Time Failure Prediction
 PredictiveMaintenance/
 │
 ├── app.py
-├── train_model.py
+├── train_model.ipynb
 ├── model.pkl
 ├── requirements.txt
 ├── README.md
