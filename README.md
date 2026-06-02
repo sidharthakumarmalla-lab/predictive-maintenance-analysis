@@ -71,11 +71,11 @@ Real-Time Failure Prediction
 PredictiveMaintenance/
 │
 ├── app.py
-├── train_model.ipynb
+├── train_model.py
 ├── model.pkl
 ├── requirements.txt
 ├── README.md
-│
+├── Predictive Maintenance & Equipment Failure Analysis.ipynb
 ├── data/
       └── predictive_maintenance.csv
 ```
