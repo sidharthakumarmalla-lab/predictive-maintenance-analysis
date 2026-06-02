@@ -77,7 +77,7 @@ PredictiveMaintenance/
 ├── README.md
 │
 ├── data/
-│   └── predictive_maintenance.csv
+      └── predictive_maintenance.csv
 ```
 
 ---
